@@ -1,0 +1,12 @@
+.grid-container
+{
+    display: grid;
+    grid-template-columns: repeat(15, 2fr);
+    background-color: blueviolet;
+    width: 100%;
+}
+
+.grid-container div
+{
+    background-color: blueviolet;
+}
