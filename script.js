@@ -1,11 +1,22 @@
 $(document).ready(fertig);
 
-function fertig()
-{
-    $("#imageMAIN").click(move)
+function fertig() {
+    $("#LeftLane").click(move);
+    $("#RightLane").click(move2);
+    $("#MiddleLane").click(move3);
 }
 
-function move()
+function move() 
 {
-    $(".Korb").append($(""));
+    $("#LeftLane").append($("#imageMAIN"));
+}
+
+function move2() 
+{
+    $("#RightLane").append($("#imageMAIN"));
+}
+
+function move3() 
+{
+    $("#MiddleLane").append($("#imageMAIN"));
 }

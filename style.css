@@ -3,6 +3,7 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr) repeat(1, 2fr) repeat(1, 0.3fr) repeat(1, 2fr) repeat(1, 0.3fr) repeat(1, 2fr) repeat(5, 1fr);
     grid-template-rows: repeat(5, 1fr);
+    position: relative;
 }
 
 #grass1
@@ -19,7 +20,7 @@
 
 #line
 {
-    background-color: rgba(0, 0, 0, 0.785);
+    background-color: darkgrey;
     height: 150px;
 }
 
@@ -40,5 +41,51 @@
 #imageMAIN
 {
     margin: 0 auto;
-    height: 130px;
+    height: 125px;
+    width: 105px;
+    position: absolute;
+}
+
+#RightLane, #MiddleLane, #LeftLane
+{
+    position: relative;
+    width: 2fr;
+    height: 2fr;
+}
+
+#inner-lane
+{
+    position: relative;
+    width: 2fr;
+    height: 2fr;
+}
+
+.TopRight
+{
+    border-top-right-radius: 15pt;
+}
+
+.BottumRight
+{
+    border-bottom-right-radius: 15pt;
+}
+
+.BottumLeft
+{
+    border-bottom-left-radius: 15pt;
+}
+
+.TopLeft
+{
+    border-top-left-radius: 15pt;
+}
+
+#lane, #RightLane, #MiddleLane, #LeftLane
+{
+    background-color: white;
+}
+
+body
+{
+    background-color: rgb(49, 43, 43);
 }
