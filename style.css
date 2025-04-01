@@ -1,8 +1,8 @@
 .grid-container
 {
     display: grid;
-    grid-template-columns: repeat(16, 1fr);
-    grid-template-rows: repeat(5, auto);
+    grid-template-columns: repeat(5, 1fr) repeat(1, 2fr) repeat(1, 0.3fr) repeat(1, 2fr) repeat(1, 0.3fr) repeat(1, 2fr) repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
 }
 
 #grass1
@@ -21,7 +21,6 @@
 {
     background-color: rgba(0, 0, 0, 0.785);
     height: 150px;
-    
 }
 
 #inner-line
@@ -36,4 +35,10 @@
     width: 0px;
     height: 0px;
     object-fit: cover;
+}
+
+#imageMAIN
+{
+    margin: 0 auto;
+    height: 130px;
 }
