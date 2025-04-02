@@ -1,22 +1,43 @@
 $(document).ready(fertig);
 
+var GameStatus = 1;
+
 function fertig() {
-    $("#LeftLane").click(move);
-    $("#RightLane").click(move2);
-    $("#MiddleLane").click(move3);
+    $("#LeftLane").click(LeftMove);
+    $("#MiddleLane").click(MiddleMove);
+    $("#RightLane").click(RightMove);
+
+    if (GameStatus == 1) {
+        
+        toggleColors(500);
+    }
 }
 
-function move() 
-{
-    $("#LeftLane").append($("#imageMAIN"));
+function LeftMove() {
+    $("#LeftLane").append($("#ImageMain"));
 }
 
-function move2() 
-{
-    $("#RightLane").append($("#imageMAIN"));
+function MiddleMove() {
+    $("#MiddleLane").append($("#ImageMain"));
 }
 
-function move3() 
-{
-    $("#MiddleLane").append($("#imageMAIN"));
+function RightMove() {
+    $("#RightLane").append($("#ImageMain"));
+}
+
+function toggleColors(ms) {
+    var isFirstColor = false;
+
+    var interval = setInterval(function () {
+        if (GameStatus !== 1) {
+            clearInterval(interval);
+            return;
+        }
+
+        $(".grass1").css("background-color", isFirstColor ? "rgba(23, 175, 9, 0.785)" : "rgba(55, 216, 41, 0.785)");
+        $(".grass2").css("background-color", isFirstColor ? "rgba(55, 216, 41, 0.785)" : "rgba(23, 175, 9, 0.785)");
+        $("#RightLane").append($("#Car1"));
+
+        isFirstColor = !isFirstColor;
+    }, ms);
 }

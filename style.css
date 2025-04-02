@@ -6,13 +6,13 @@
     position: relative;
 }
 
-#grass1
+.grass1
 {
     background-color: rgba(23, 175, 9, 0.785);
     height: 150px;
 }
 
-#grass2
+.grass2
 {
     background-color: rgba(55, 216, 41, 0.785);
     height: 150px;
@@ -20,7 +20,7 @@
 
 #line
 {
-    background-color: darkgrey;
+    background-color: rgb(104, 97, 97);
     height: 150px;
 }
 
@@ -28,7 +28,7 @@
 {
     background-color: rgba(0, 0, 0, 0.785);
     height: 75px;
-    width: 5px;
+    width: 7px;
 }
 
 .img
@@ -38,7 +38,7 @@
     object-fit: cover;
 }
 
-#imageMAIN
+#ImageMain
 {
     margin: 0 auto;
     height: 125px;
@@ -87,5 +87,13 @@
 
 body
 {
-    background-color: rgb(49, 43, 43);
+    background-color: white;
+}
+
+#Car1
+{
+    margin: 0 auto;
+    height: 120px;
+    width: 100px;
+    position: absolute;
 }
