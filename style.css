@@ -4,18 +4,24 @@
     grid-template-columns: repeat(5, 1fr) repeat(1, 2fr) repeat(1, 0.3fr) repeat(1, 2fr) repeat(1, 0.3fr) repeat(1, 2fr) repeat(5, 1fr);
     grid-template-rows: repeat(5, 1fr);
     position: relative;
+    
+    justify-content: center;
 }
 
 .grass1
 {
     background-color: rgba(23, 175, 9, 0.785);
     height: 150px;
+    position: relative;
+    justify-content: center;
 }
 
 .grass2
 {
     background-color: rgba(55, 216, 41, 0.785);
     height: 150px;
+    position: relative;
+    justify-content: center;
 }
 
 #line
@@ -44,6 +50,7 @@
     height: 125px;
     width: 105px;
     position: absolute;
+    background-color: red;
 }
 
 #RightLane, #MiddleLane, #LeftLane
@@ -51,6 +58,7 @@
     position: relative;
     width: 2fr;
     height: 2fr;
+    justify-content: center;
 }
 
 #inner-lane
@@ -60,7 +68,7 @@
     height: 2fr;
 }
 
-.TopRight
+/* .TopRight
 {
     border-top-right-radius: 15pt;
 }
@@ -73,16 +81,17 @@
 .BottumLeft
 {
     border-bottom-left-radius: 15pt;
-}
+} */
 
 .TopLeft
 {
     border-top-left-radius: 15pt;
 }
 
-#lane, #RightLane, #MiddleLane, #LeftLane
+.lane, #RightLane, #MiddleLane, #LeftLane
 {
     background-color: white;
+    justify-content: center;
 }
 
 body
@@ -94,6 +103,26 @@ body
 {
     margin: 0 auto;
     height: 120px;
-    width: 100px;
+    width: 120px;
+    position: relative;
+    background-color: red;
+    
+}
+
+#tree1
+{
+    margin: 0 auto;
+    height: 100px;
+    width: 80px;
     position: absolute;
+    justify-content: right;
+    align-items: center;
+}
+
+#drive
+{
+    position: relative;
+    width: 2fr;
+    height: 2fr;
+    justify-content: center;
 }
