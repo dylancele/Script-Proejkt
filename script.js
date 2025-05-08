@@ -13,49 +13,20 @@ function fertig() {
         Tree();
     }
 
-    const gameArea = $("#game-area");
+    const car = $("#ImageMain");
+    let carPosition = 50; // in percent
 
-    // Get initial position when page loads (to avoid jumping behavior)
-    const car = document.getElementById("ImageMain");
-    let carPosition = 50; // Initial position in percentage (matches CSS `left: 50%`)
-
-document.addEventListener("keydown", function (event) {
-    if (event.key === "a" || event.key === "A") {
-        if (carPosition > -95) { // Prevent moving out of bounds
-            carPosition -= 15; // Move left by 10%
-            car.style.left = carPosition + "%";
-        }
-    } else if (event.key === "d" || event.key === "D") {
-        if (carPosition < 189) { // Prevent moving out of bounds
-            carPosition += 15; // Move right by 10%
-            car.style.left = carPosition + "%";
-        }
-    }
-});
-
-setInterval(checkCollision, 50);
-}
-
-function isColliding(element1, element2) {
-    const rect1 = element1.getBoundingClientRect();
-    const rect2 = element2.getBoundingClientRect();
-
-    return !(
-        rect1.top > rect2.bottom ||
-        rect1.bottom < rect2.top ||
-        rect1.left > rect2.right ||
-        rect1.right < rect2.left
-    );
-}
-
-function checkCollision() {
-    const playerCar = document.getElementById("ImageMain");
-    const trafficCars = document.querySelectorAll("#drive, .traffic-car");
-
-    trafficCars.forEach((trafficCar) => {
-        if (isColliding(playerCar, trafficCar)) {
-            GameStatus = 0;
-            console.log("Collision detected! Game over.");
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "a" || event.key === "A") {
+            if (carPosition > -95) {
+                carPosition -= 15;
+                car.stop().animate({ left: carPosition + "%" }, 200);
+            }
+        } else if (event.key === "d" || event.key === "D") {
+            if (carPosition < 189) {
+                carPosition += 15;
+                car.stop().animate({ left: carPosition + "%" }, 200);
+            }
         }
     });
 }
@@ -97,28 +68,23 @@ function Traffic() {
 }
 
 function Tree() {
-    // Get all the divs in the grid container
     const grassDivs = $(".grid-container > div");
-    let currentIndex = 1; // Start at the second div (index 1, assuming tree1 starts in the second div)
+    let currentIndex = 1;
 
-    // Move the tree each time the grass changes color
     const treeInterval = setInterval(function () {
         if (GameStatus !== 1) {
             clearInterval(treeInterval);
             return;
         }
 
-        // Remove the tree from the current div
         $("#tree1").detach();
 
-        // Check if the tree has reached the last div
         if (currentIndex >= grassDivs.length) {
-            clearInterval(treeInterval); // Stop the interval
-            return; // Exit the function
+            clearInterval(treeInterval);
+            return;
         }
 
-        // Move the tree to the next div
         $(grassDivs[currentIndex]).append($("#tree1"));
-        currentIndex++; // Increment the index
-    }, 250); // Adjust the interval time as needed
+        currentIndex++;
+    }, 250);
 }
