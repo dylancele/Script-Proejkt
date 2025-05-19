@@ -1,101 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="jquery-3.6.0.min (1).js"></script>
     <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
 </head>
 <body>
     <div class="grid-background">
-    <div class="grid-container">
-        <div class="grass1"></div>
-        <div class="grass2"><img id="tree1" src="tree1.png"></div>
-        <div class="grass1"></div>
-        <div class="grass2"></div>
-        <div id="line"></div>
-        <div class="FirstLane1"><div id="drive"><img id="Car1" src="car1.png" alt="Car"></div></div>
+        <div class="grid-container">
+            <div class="Topgrass1"></div>
+            <div class="Topgrass2"></div>
+            <div class="Topgrass3"></div>
+            <div class="Topgrass4"></div>
+            <div id="line"></div>
+            <div class="FirstLane1"></div>
+            <div id="inner-line" style="grid-column: 7; grid-row: 1;"></div>
+            <div class="SecondLane1"></div>
+            <div id="inner-line"></div>
+            <div class="ThirdLane1"></div>
+            <div id="line"></div>
+            <div class="Topgrass5"></div>
+            <div class="Topgrass6"></div>
+            <div class="Topgrass7"></div>
+            <div class="Topgrass8"></div>
 
-        <div id="inner-line" style="grid-column: 7; grid-row: 1;">
-            <div class="inner-line-half top-half"></div>
-            <div class="inner-line-half bottom-half"></div>
+            <div class="grass2"></div>
+            <div class="grass1"></div>
+            <div class="grass2"></div>
+            <div class="grass1"></div>
+            <div id="line"></div>
+            <div class="FirstLane2"></div>
+            <div id="inner-line"></div>
+            <div class="SecondLane2"></div>
+            <div id="inner-line"></div>
+            <div class="ThirdLane2"></div>
+            <div id="line"></div>
+            <div class="grass1"></div>
+            <div class="grass2"></div>
+            <div class="grass1"></div>
+            <div class="grass2"></div>
+
+            <div class="grass1"></div>
+            <div class="grass2"></div>
+            <div class="grass1"></div>
+            <div class="grass2"></div>
+            <div id="line"></div>
+            <div class="FirstLane3"></div>
+            <div id="inner-line"></div>
+            <div class="SecondLane3"></div>
+            <div id="inner-line"></div>
+            <div class="ThridLane3"></div>
+            <div id="line"></div>
+            <div class="grass2"></div>
+            <div class="grass1"></div>
+            <div class="grass2"></div>
+            <div class="grass1"></div>
+
+            <div class="grass2"></div>
+            <div class="grass1"></div>
+            <div class="grass2"></div>
+            <div class="grass1"></div>
+            <div id="line"></div>
+            <div id="LeftLane" class="FirstLane4"></div>
+            <div id="inner-line"></div>
+            <div id="MiddleLane" class="SecondLane4"></div>
+            <div id="inner-line"></div>
+            <div id="RightLane" class="ThirdLane4"></div>
+            <div id="line"></div>
+            <div class="grass1"></div>
+            <div class="grass2"></div>
+            <div class="grass1"></div>
+            <div class="grass2"></div>
+
+            <div class="grass1"></div>
+            <div class="grass2"></div>
+            <div class="grass1"></div>
+            <div class="grass2"></div>
+            <div id="line"></div>
+            <div class="FirstLane5"></div>
+            <div id="inner-line"></div>
+            <div class="SecondLane5"></div>
+            <div id="inner-line"></div>
+            <div class="ThirdLane5"></div>
+            <div id="line"></div>
+            <div class="grass2"></div>
+            <div class="grass1"></div>
+            <div class="grass2"></div>
+            <div class="grass1"></div>
+
+            <div class="grass2"></div>
+            <div class="grass1"></div>
+            <div class="grass2"></div>
+            <div class="grass1"></div>
+            <div id="line"></div>
+            <div class="FirstLane6"></div>
+            <div id="inner-line"></div>
+            <div class="SecondLane6"></div>
+            <div id="inner-line"></div>
+            <div class="ThirdLane"></div>
+            <div id="line"></div>
+            <div class="grass1"></div>
+            <div class="grass2"></div>
+            <div class="grass1"></div>
+            <div class="grass2"></div>
         </div>
-
-        <div class="SecondLane1"></div>
-        <div id="inner-line"></div>
-        <div class="ThirdLane1"></div>
-        <div id="line"></div>
-        <div class="grass2"></div>
-        <div class="grass1"></div>
-        <div class="grass2"></div>
-        <div class="grass1"></div>
-
-        <div class="grass2"></div>
-        <div class="grass1"></div>
-        <div class="grass2"></div>
-        <div class="grass1"></div>
-        <div id="line"></div>
-        <div class="FirstLane2"></div>
-        <div id="inner-line"></div>
-        <div class="SecondLane2"></div>
-        <div id="inner-line"></div>
-        <div class="ThirdLane2"></div>
-        <div id="line"></div>
-        <div class="grass1"></div>
-        <div class="grass2"></div>
-        <div class="grass1"></div>
-        <div class="grass2"></div>
-
-        <div class="grass1"></div>
-        <div class="grass2"></div>
-        <div class="grass1"></div>
-        <div class="grass2"></div>
-        <div id="line"></div>
-        <div class="FirstLane3"></div>
-        <div id="inner-line"></div>
-        <div class="SecondLane3"></div>
-        <div id="inner-line"></div>
-        <div class="ThridLane3"></div>
-        <div id="line"></div>
-        <div class="grass2"></div>
-        <div class="grass1"></div>
-        <div class="grass2"></div>
-        <div class="grass1"></div>
-
-        <div class="grass2"></div>
-        <div class="grass1"></div>
-        <div class="grass2"></div>
-        <div class="grass1"></div>
-        <div id="line"></div>
-        <div id="LeftLane" class="FirstLane4"></div>
-        <div id="inner-line"></div>
-        <div id="MiddleLane" class="SecondLane4"><img id="ImageMain" src="CarMain1.png"></img></div>
-        <div id="inner-line"></div>
-        <div id="RightLane" class="ThirdLane4"></div>
-        <div id="line"></div>
-        <div class="grass1"></div>
-        <div class="grass2"></div>
-        <div class="grass1"></div>
-        <div class="grass2"></div>
-
-        <div class="grass1"></div>
-        <div class="grass2"></div>
-        <div class="grass1"></div>
-        <div class="grass2"></div>
-        <div id="line"></div>
-        <div class="FirstLane5"></div>
-        <div id="inner-line"></div>
-        <div class="SecondLane5"></div>
-        <div id="inner-line"></div>
-        <div class="ThirdLane5"></div>
-        <div id="line"></div>
-        <div class="grass2"></div>
-        <div class="grass1"></div>
-        <div class="grass2"></div>
-        <div class="grass1"></div>
     </div>
-</div>
+
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        const carChoice = localStorage.getItem("selectedCar");
+        if (!carChoice) {
+          alert("No car selected. Redirecting to select page.");
+          window.location.href = "select.html";
+          return;
+        }
+        const imageSrc = `SelectPage/CarMain${carChoice}.png`; // adjust path if needed
+        const middleLane = document.getElementById("MiddleLane");
+        middleLane.innerHTML = `<img id="ImageMain" src="${imageSrc}" alt="Player Car" />`;
+      });
+    </script>
 </body>
 </html>

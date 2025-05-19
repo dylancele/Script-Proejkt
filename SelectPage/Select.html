@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Car Selection</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="card-container">
+    <div class="card">
+      <div class="image-box">
+        <img src="CarMain1.png" alt="Car 1" />
+      </div>
+      Mazda MX-5
+      <button class="select-button" onclick="selectCar(1)">Select</button>
+    </div>
+
+    <div class="card">
+      <div class="image-box">
+        <img src="CarMain2.png" alt="Car 2" />
+      </div>
+      F1
+      <button class="select-button" onclick="selectCar(2)">Select</button>
+    </div>
+
+    <div class="card">
+      <div class="image-box">
+        <img src="CarMain3.png" alt="Car 3" />
+      </div>
+      Nissan Skyline GT-R
+      <button class="select-button" onclick="selectCar(3)">Select</button>
+    </div>
+
+    <div class="card">
+      <div class="image-box">
+        <img src="CarMain4.png" alt="Car 4" />
+      </div>
+      Ferrari F8
+      <button class="select-button" onclick="selectCar(4)">Select</button>
+    </div>
+  </div>
+
+  <div class="ready-container">
+    <button class="ready-button" onclick="startGame()">START</button>
+  </div>
+
+  <script>
+    let selected = null;
+
+    function selectCar(number) {
+      selected = number;
+    }
+
+    function startGame() {
+      if (selected === null) {
+        alert("Please select a car first.");
+        return;
+      }
+      localStorage.setItem("selectedCar", selected);
+      location.href = "/code.html"; // change path if needed
+    }
+  </script>
+</body>
+</html>

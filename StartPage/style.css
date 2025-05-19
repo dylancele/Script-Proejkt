@@ -1,0 +1,57 @@
+.fullscreen-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.fullscreen-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.centered-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.title-text, .subtitle-text {
+    font-family: 'Press Start 2P', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.title-text {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.subtitle-text {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.start-button {
+    font-family: 'Press Start 2P', sans-serif; 
+    font-size: 1rem; 
+    padding: 10px 20px;
+    background-color: #7636c0; 
+    color: white; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease;
+}
+
+.start-button:hover {
+    background-color: #7636c0;
+}

@@ -4,24 +4,32 @@
     grid-template-columns: repeat(5, 1fr) repeat(1, 2fr) repeat(1, 0.3fr) repeat(1, 2fr) repeat(1, 0.3fr) repeat(1, 2fr) repeat(5, 1fr);
     grid-template-rows: repeat(5, 1fr);
     position: relative;
-
+    flex-direction: column;
     justify-content: center;
 }
 
-.grass1
+.grid-container > div {
+    flex: 1; /* Each div takes equal vertical space */
+    width: 100%; /* Full width */
+    position: relative;
+}
+
+.grass1, .Topgrass1, .Topgrass3, .Topgrass6, .Topgrass8
 {
     background-color: rgba(23, 175, 9, 0.785);
     height: 150px;
     position: relative;
     justify-content: center;
+    position: absolute;
 }
 
-.grass2
+.grass2, .Topgrass2, .Topgrass4, .Topgrass5, .Topgrass7
 {
     background-color: rgba(55, 216, 41, 0.785);
     height: 150px;
     position: relative;
     justify-content: center;
+    position: absolute;
 }
 
 #line
@@ -57,12 +65,13 @@
 {
     position: absolute; /* Required for 'left' to work */
     top: 50%; /* Center vertically */
-    left: 50% ease; /* Start in the middle */
+    left: 85px ; /* Start in the middle */
     transform: translate(-50%, -50%); /* Center the car */
-    height: 125px;
-    width: 105px;
-    /* background-color: red; For visibility during testing */
+    height: 115px;
+    width: 55px;
+    /* background-color: red;  */
     z-index: 1000000;
+    background-color: red;
 }
 
 #RightLane, #MiddleLane, #LeftLane {
@@ -116,18 +125,19 @@ body
     height: 120px;
     width: 120px;
     position: relative;
-    /* background-color: red; */
+    /* background-color: red;  */
     
 }
 
 #tree1
 {
-    margin: 0 auto;
-    height: 100px;
+    position: relative;
     width: 80px;
-    position: absolute;
-    justify-content: right;
-    align-items: center;
+    height: 100px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    z-index: 100;
 }
 
 #drive
@@ -136,4 +146,17 @@ body
     width: 2fr;
     height: 2fr;
     justify-content: center;
+}
+
+.FirstLane1, .SecondLane1, .ThirdLand1
+{
+    position: relative;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Prevent scrolling */
 }
