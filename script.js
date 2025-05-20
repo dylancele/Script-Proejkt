@@ -12,7 +12,6 @@ function fertig() {
         Traffic();
         Tree();
     }
-    setInterval(checkCollision, 50);
 }
 
 function isColliding(element1, element2) {
@@ -30,9 +29,11 @@ function isColliding(element1, element2) {
         rect1.left > rect2.right ||
         rect1.right < rect2.left
     );
+    
 }
 
 function checkCollision() {
+    console.log("Running checkCollision"); // Just to see it's working at all
     const playerCar = document.getElementById("ImageMain");
     const trafficCars = document.querySelectorAll("#drive, .traffic-car");
 
@@ -49,7 +50,7 @@ function checkCollision() {
     trafficCars.forEach((trafficCar) => {
         if (isColliding(playerCar, trafficCar)) {
             console.log("Collision detected between player car and traffic car!");
-            GameStatus = 0; // Stop the game
+            GameStatus = 0;
         }
     });
 }

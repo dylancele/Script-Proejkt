@@ -109,18 +109,23 @@
         </div>
     </div>
 
-    <script>
+    <script> // saves the selected car as localstorage since its getting a variable from a different html file, then creates the Main car Image. Then creates a delay and starts the collision check
+    
       window.addEventListener("DOMContentLoaded", () => {
-        const carChoice = localStorage.getItem("selectedCar");
-        if (!carChoice) {
-          alert("No car selected. Redirecting to select page.");
-          window.location.href = "select.html";
-          return;
-        }
-        const imageSrc = `SelectPage/CarMain${carChoice}.png`; // adjust path if needed
-        const middleLane = document.getElementById("MiddleLane");
-        middleLane.innerHTML = `<img id="ImageMain" src="${imageSrc}" alt="Player Car" />`;
-      });
+      const carChoice = localStorage.getItem("selectedCar");
+      if (!carChoice) {
+      alert("No car selected. Redirecting to select page.");
+      window.location.href = "select.html";
+      return;
+      }
+
+      const imageSrc = `SelectPage/CarMain${carChoice}.png`;
+      const middleLane = document.getElementById("MiddleLane");
+      middleLane.innerHTML = `<img id="ImageMain" src="${imageSrc}" alt="Player Car" />`;
+
+      
+      setInterval(checkCollision, 50);
+});
     </script>
 </body>
 </html>
